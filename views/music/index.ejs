@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>iTunes Search</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  <h1><%= user.username %>, search for adoptable pets!</h1>
+  <form action="/music/search" method="POST">
+    <input type="text" name="animal" placeholder="search for your favorite album">
+    <input type="submit" value="Search">
+  </form>
+  <div id="favorites-container">
+    <h2><%= user.username %>'s Favorites:</h2>
+    <% favorites.forEach((fave) => { %>
+      <div class="fave">
+        <img style="height:180px; width: 180px" src="<%= fave.artworkUrl100 %>" alt="">
+        <p><%= fave.artistName %></p>
+        <p><%= fave.collectionName %></p>
+        <form action="/music/favorites/<%= fave._id %>?_method=DELETE" method="post">
+          <input type="submit" value="Delete">
+        </form>
+      </div>
+    <% }) %>
+  </div>
+  <div id="search-results-container">
+    <h2>Search Results:</h2>
+
+    <% results.forEach((m) => { %>
+      <div class="search-results">
+        <img style="height:180px; width: 180px" src="<%= m.media.photos.photo[2].$t %>" alt="">
+        <p><%= m.description.$t %></p>
+        <form action="/music/favorites" method="POST">
+          <input type="hidden" name="favorite[collectionName]" value="<%= m.description.$t %>">
+
+          <input type="hidden" name="favorite[artworkUrl100]" value="<%=  m.media.photos.photo[2].$t  %>">
+          <input type="submit" value="SAVE">
+        </form>
+      </div>
+    <% }) %>
+  </div>
+  <a href="/users/profile">Home</a>
+</body>
+</html>
