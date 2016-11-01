@@ -1,7 +1,86 @@
 .body {
-  background-color:red;
+  background-color:#f0f0f5;
 }
 
 .banner h1 {
+  font-size: 45px;
   color: purple;
 }
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100px;
+  margin-top: -10px;
+}
+
+.container {
+  margin-left:5%;
+  width: 90%;
+  height: 500px;
+   border: 4px inset grey;
+   background-image: url(https://www.petfinder.com/wp-content/uploads/2015/08/organize-a-local-pet-adoption-event-632x304.jpg);
+  background-size: cover;
+}
+
+nav a {
+  text-decoration: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+nav {
+   text-align: right;
+   margin-right: 10%;
+}
+
+#search-results-container {
+ width: 78%;
+ float: right;
+}
+
+#favorites-container {
+  width: 22%;
+  float: left;
+}
+.main-conatiner {
+   border: 4px inset #666666;
+   width: 98%;
+   height: 98%
+}
+.login {
+  text-align: center;
+  margin-top: 5%;
+  padding-top: 20%;
+  background-image: url(https://trustedpartner.cachefly.net/images/library/PeggyAdamsHSPB2013/Services/DogHome.jpg);
+   margin-left:5%;
+  width: 90%;
+  height: 300px;
+   border: 4px inset grey;
+   background-size:cover;
+
+}
+.login h1 {
+  color:#808080;
+  text-shadow: 1.5px 1.5px #333333;
+}
+.signup {
+   text-align: center;
+  margin-top: 5%;
+  padding-top: 20%;
+  background-image: url(http://cdn5.momsxyz.com/2015/03/Adoption.jpg);
+   margin-left:5%;
+  width: 90%;
+  height: 300px;
+   border: 4px inset grey;
+   background-size:cover;
+}
+.signup h1 {
+  color:#808080;
+  text-shadow: 1.5px 1.5px #333333;
+}
+
+
+
+
