@@ -10,23 +10,27 @@
  <div class="banner">
     <h1> Carnegie Pet Adoption</h1>
   </div>
-  <hr>
-  <h1><%= user.username %>, search for adoptable pets!</h1>
-  <form action="/pets/search" method="POST">
-    <input type="text" name="animal" placeholder="search for your favorite album">
+  <hr style="width:90%">
+  <nav>
+  <a href="/users/profile" style="text-align: right">Home</a>
+  </nav>
+  <h1 style="text-align: center;"><%= user.username %>, search for adoptable pets!</h1>
+  <h6 style="text-align: center">  bird  cat  dog  horse  pig  rabbit  </h6>
+  <form  style="text-align: center;" action="/pets/search" method="POST">
+    <input class="input" type="text" name="animal" placeholder="Pet search">
     <input type="submit" value="Search">
   </form>
-  <div class="main-conatiner">
+  <div class="main-container">
   <div id="favorites-container">
     <h2><%= user.username %>'s Favorites:</h2>
     <% favorites.forEach((fave) => { %>
       <div class="fave">
         <img style="margin-left: 10px;height:180px; width: 180px" src="<%= fave.artworkUrl100 %>" alt="">
-        <div style="border: 4px inset grey;align-items: center;height:100px;width:180px;overflow:auto;background-color:yellowgreen;color:white;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+        <div style="border: 4px inset grey;align-items: center;height:100px;width:180px;overflow:auto;background-color: #f9e6ff;color:#330033;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
         <p><%= fave.artistName %></p>
         <p><%= fave.collectionName %></p>
         </div>
-        <form style="margin-left: 18%" action="/pets/favorites/<%= fave._id %>?_method=DELETE" method="post">
+        <form style="margin-left: 30%" action="/pets/favorites/<%= fave._id %>?_method=DELETE" method="post">
           <input type="submit" value="Delete">
         </form>
       </div>
@@ -37,21 +41,20 @@
 
     <% results.forEach((m) => { %>
       <div class="search-results" style="display: inline-block;">
-        <img style="height:180px; width: 180px" src="<%= m.media.photos.photo[2].$t %>" alt="">
-        <div style="height:100px;width:180px;overflow:auto;background-color:yellowgreen;color:white;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+        <img style="height:180px; width: 180px; margin-left:11px" src="<%= m.media.photos.photo[2].$t %>" alt="">
+        <div style="height:100px;width:180px;overflow:auto;background-color:#e6e6ff;color:#000033;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
         <p><%= m.description.$t %></p>
         </div>
 
         <form action="/pets/favorites" method="POST">
           <input type="hidden" name="favorite[collectionName]" value="<%= m.description.$t %>">
-
           <input type="hidden" name="favorite[artworkUrl100]" value="<%=  m.media.photos.photo[2].$t  %>">
-          <input style="text-align: center;" type="submit" value="SAVE">
+          <input style="margin-left: 40%;" type="submit" value="SAVE">
         </form>
       </div>
     <% }) %>
   </div>
   </div>
-  <a href="/users/profile">Home</a>
+
 </body>
 </html>

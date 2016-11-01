@@ -44,10 +44,15 @@ nav {
   width: 22%;
   float: left;
 }
-.main-conatiner {
-   border: 4px inset #666666;
-   width: 98%;
-   height: 98%
+.main-container {
+  height: 100%;
+   border: 4px inset #7575a3;
+   border-radius: 25px;
+   width: 90%;
+   margin-left:4%;
+   height: 98%;
+   padding-left: 20px;
+   overflow: auto;
 }
 .login {
   text-align: center;
@@ -80,7 +85,22 @@ nav {
   color:#808080;
   text-shadow: 1.5px 1.5px #333333;
 }
+.input {
+  height:25px;
+  width: 200px;
+}
 
+.welcome_ h1{
+color: #33334d;
+}
+.welcome_ a {
+  text-decoration: none;
+}
+.welcome_ {
+  margin-top:15%;
+  text-align: center;
+  font-size: 150%;
+}
 
 
 

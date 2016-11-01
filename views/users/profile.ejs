@@ -7,13 +7,16 @@
   </head>
   <body class="body">
     <div class="banner">
+
     <h1> Carnegie Pet Adoption</h1>
   </div>
   <hr>
+  <div class="welcome_">
     <h1>Welcome! <%= user.username %></h1>
     <a href="/pets">Pet Search</a>
     <form action="/auth?_method=DELETE" method="post">
       <input type="submit" value="Logout">
     </form>
+    </div>
   </body>
 </html>
