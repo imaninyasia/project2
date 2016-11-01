@@ -1,0 +1,11 @@
+https://petfinderproject.herokuapp.com/
+
+https://github.com/imaninyasia/project2
+https://wireframe.cc/SsvK7x
+https://wireframe.cc/mTJs4s
+
+I used mongo databases, and node packages to create this app.
+I used the itunes_user_auth files as a template and built my project off of that.
+When deploying my project I ran into issues... The login and signup buttons aren't working
+because of what seems to be an error in connecting to the local host? This is an issue
+I haven't been able to resolve as of yet...

@@ -1,6 +1,5 @@
 const { ObjectID } = require('mongodb');
 const { getDB }    = require('../lib/dbConnect.js');
-const dbConnection = process.env.MONGODB_URI || 'mongodb://localhost:27017/user_auth_itunes';
 
 // const DB_CONNECTION = 'mongodb://localhost:27017/itunescrud';
 

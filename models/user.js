@@ -1,6 +1,5 @@
 /* eslint no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true } }] */
 /* eslint no-param-reassign: ["error", { "props": false }] */
-const dbConnection = process.env.MONGODB_URI || 'mongodb://localhost:27017/user_auth_itunes';
 
 const { ObjectID } = require('mongodb');
 const { getDB }    = require('../lib/dbConnect.js');
